@@ -1,5 +1,5 @@
 import React from "react";
-import products from "./utility/data";
+// import products from "./utility/data";
 
 const App = () => {
   const productcat = products.flatMap((product) =>
