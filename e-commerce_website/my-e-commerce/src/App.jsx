@@ -3,6 +3,7 @@ import products from "./utility/data";
 import CardComponents from "../src/components/CardComponents";
 import Header from "../src/components/header";
 import Header2 from "../src/components/header2";
+import Header3 from "../src/components/header3";
 import Footer2 from "../src/components/footer2";
 import Footer from "../src/components/footer";
 
@@ -14,6 +15,9 @@ const App = () => {
       </header>
       <div className="bg-black text-white py-6">
         <Header2 />
+      </div>
+      <div className="bg-white py-6">
+        <Header3 /> {/* Add Header3 here */}
       </div>
       <div className="w-fullscreen flex justify-center items-center flex-wrap bg-red-900">
         <CardComponents items={products} />

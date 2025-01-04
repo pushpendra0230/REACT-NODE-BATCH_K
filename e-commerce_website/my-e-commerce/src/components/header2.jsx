@@ -64,7 +64,7 @@ const Header2 = () => {
           <img
             src="https://e-commerce-mansy.vercel.app/assets/phone.png"
             alt="Product Preview"
-            className="object-contain"
+            className="object-contain transform hover:scale-105 hover:translate-x-4 hover:shadow-lg hover:shadow-green-500 transition-all duration-300"
             style={{ width: "300px", height: "400px" }}
           />
         </div>
