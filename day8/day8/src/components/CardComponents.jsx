@@ -16,12 +16,14 @@ const CardComponent = ({ product }) => {
     }
   };
   return (
-    <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+    <div className="w-72 m-8 p-4 bg-red-200 rounded-xl shadow-xl shadow-red-400 transform transition-transform hover:scale-105 hover:shadow-green-600 duration-300">
       <a href="#">
         <img
           src={product.image}
           alt="Product"
-          className="h-80 w-72 object-cover rounded-t-xl"
+          className="h-80 w-72 object-cover rounded-t-xl 
+             shadow-red-800 transform transition-all duration-300 
+             hover:scale-105 hover:shadow-xl hover:shadow-green-500"
         />
         <div className="px-4 py-3 w-72">
           <span className="text-gray-400 mr-3 uppercase text-xs">
@@ -54,7 +56,11 @@ const CardComponent = ({ product }) => {
             >
               -
             </button>
-            <button className="bg-orange-500 text-white rounded-full p-3 w-32 relative left-20">
+            <button
+              className="bg-orange-500 text-white rounded-full p-3 w-32 relative left-16 
+             hover:bg-orange-600 hover:scale-105 transform transition-all 
+             duration-300 hover:shadow-lg hover:shadow-orange-500"
+            >
               Add to Cart
             </button>
           </div>
