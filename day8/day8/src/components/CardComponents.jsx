@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 const CardComponent = ({ product }) => {
+  
   const [count, setCount] = useState(0);
-
   const handleClickIncrement = () => {
     if (count >= 5) {
       alert("You can't increment more than 5 times");
