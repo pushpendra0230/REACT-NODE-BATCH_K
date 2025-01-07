@@ -93,7 +93,6 @@ const CardComponent = ({ product, count, onIncrement, onDecrement }) => {
       onDecrement();
     }
   };
-
   return (
     <div className="w-72 m-8 p-4 bg-red-200 rounded-xl shadow-xl shadow-red-400 transform transition-transform hover:scale-105 hover:shadow-green-600 duration-300">
       <a href="#">
