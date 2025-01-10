@@ -1,6 +1,7 @@
 const cardData = [
   {
     id: 1,
+    //iss url se aor random=1 se image refresh par change hoti 
     img: "https://picsum.photos/420?random=1",
     alt: "Reading",
     title: "New Year's Resolutions",
