@@ -6,10 +6,7 @@ const App = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slidesPerView = 3;
   //total slides Calculate karne ke liye
-  const totalSlides =
-    cardData.length % slidesPerView === 0
-      ? cardData.length / slidesPerView
-      : Math.floor(cardData.length / slidesPerView) + 1;
+  const totalSlides = Math.ceil(cardData.length / slidesPerView);
   // Handlers for navigation
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -22,29 +19,28 @@ const App = () => {
       <div className="absolute inset-0 flex flex-col justify-center items-center p-8">
         <div className="overflow-hidden w-full max-w-6xl">
           <div
-            className={`flex transition-transform duration-500 transform ${
-              currentSlide === 0 ? "" : `translate-x-[-${currentSlide * 100}%]`
-            }`}
+            className={`flex transition-transform duration-500 ease-in-out transform`}
+            style={{
+              transform: `translateX(-${currentSlide * 100}%)`,
+            }}
           >
-            {/* Create 3 slides in one slide*/}
-            {Array(totalSlides)
-              .fill()
-              .map((_, i) => (
-                <div key={`slide-${i}`} className="flex w-full">
-                  {cardData
-                    .slice(i * slidesPerView, i * slidesPerView + slidesPerView) //Starts at the index and Ends at the index
-                    .map((card) => (
-                      <div key={card.id} className="w-1/3 p-28">
-                        <CardComponent
-                          img={card.img}
-                          alt={card.alt}
-                          title={card.title}
-                          description={card.description}
-                        />
-                      </div>
-                    ))}
-                </div>
-              ))}
+            {/* Create 3 slides in one slide */}
+            {Array.from({ length: totalSlides }).map((_, i) => (
+              <div key={`slide-${i}`} className="flex w-full">
+                {cardData
+                  .slice(i * slidesPerView, i * slidesPerView + slidesPerView)
+                  .map((card) => (
+                    <div key={card.id} className="w-1/3 p-28">
+                      <CardComponent
+                        img={card.img}
+                        alt={card.alt}
+                        title={card.title}
+                        description={card.description}
+                      />
+                    </div>
+                  ))}
+              </div>
+            ))}
           </div>
         </div>
 
@@ -64,13 +60,13 @@ const App = () => {
 
         {/* Dots Slide ki Navigation */}
         <div className="flex justify-center space-x-2 mt-4">
-          {Array.from({ length: totalSlides }, (_, i) => (
+          {Array.from({ length: totalSlides }).map((_, i) => (
             <button
               key={`dot-${i}`} //har ek dot ke liye ek unique key
               className={`w-3 h-3 rounded-full hover:scale-150 transition-transform duration-300 ${
                 i === currentSlide ? "bg-white" : "bg-white/30" //dot's ko color dene ke liye
               }`}
-              onClick={() => setCurrentSlide(i)} //slide ko change karne ke liye
+              onClick={() => setCurrentSlide(i)}  //slide ko change karne ke liye
             />
           ))}
         </div>
