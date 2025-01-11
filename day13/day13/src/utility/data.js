@@ -10,6 +10,7 @@ const cardData = [
   {
     id: 2,
     img: "https://picsum.photos/420?random=2",
+    
     alt: "Dancing",
     title: "New Year's Resolutions",
     description: "Learn to Dance",
