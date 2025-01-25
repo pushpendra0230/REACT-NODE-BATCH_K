@@ -110,7 +110,7 @@ const ProductComponent = () => {
         {products.map((product, index) => (
           <div
             key={product.id}
-            className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+            className="w-72 m-8 p-4 bg-red-200 rounded-xl shadow-xl shadow-red-400 transform transition-transform hover:scale-105 hover:shadow-green-600 duration-300"
           >
             <Link to={`/product-details/${product.id}`}>
               <img

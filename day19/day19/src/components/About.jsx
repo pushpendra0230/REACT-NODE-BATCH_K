@@ -30,40 +30,52 @@ const About = () => {
         <div className="row row-middle pb-6 flex flex-wrap gap-8 justify-center">
           {[
             {
-              name: "Pushpendra Soni",
+              name: "Prrajal Dhar",
               role: "Chief Executive Officer",
               location: "India",
+              image:
+                "https://media.licdn.com/dms/image/v2/D4D35AQGS_8L8vsq7dg/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1660542883845?e=1738303200&v=beta&t=fiKmrTqK6kxuOuRGIS50tIZgJ4npUpS-rY5za73780g",
             },
             {
-              name: "Prrajal Dhar",
+              name: "Pushpendra Soni",
               role: "Managing Director",
               location: "India",
+              image:
+                "https://media.licdn.com/dms/image/v2/D5603AQHuQAKEECrVxQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731229744318?e=1743033600&v=beta&t=QJg-Islm4slROZ_gzlLnbyY51bjU_mNAu5SsKDqLSFI",
             },
             {
               name: "Mohit Soni",
               role: "Chief Scientific Advisor",
               location: "India",
+              image:
+                "https://media.licdn.com/dms/image/v2/D4D03AQGnZ37LL-mLBA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1728627623151?e=1743033600&v=beta&t=WWph_iyqSbrWdxmkcKTOYh4fejvMNQ7VnHzkwJC-9-w",
             },
             {
-              name: "Rahul Sharma",
+              name: "Aditya Mathur",
               role: "Chief Scientific Officer",
               location: "India",
+              image:
+                "https://media.licdn.com/dms/image/v2/D5603AQE5ciXM8KxMzQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1718175002939?e=1743033600&v=beta&t=xNA5VktX6tcfLIsZiMv0UKUmzw-y0aWaoFZPjmEqTzw",
             },
             {
-              name: "Dev Sahu",
+              name: "Kshitij Barman",
               role: "Board of Director",
               location: "India",
+              image:
+                "https://media.licdn.com/dms/image/v2/D5603AQHuF6tEJ4wiEA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1718464047792?e=1743033600&v=beta&t=iYGl5QxQu9CU0JQzMfWY8awlDG0OWBG4qC0Xe5PDtLE",
             },
             {
-              name: "Patrick Soni",
+              name: "NIKHIL SANWARIYA",
               role: "Managing Partner",
               location: "India",
+              image:
+                "https://media.licdn.com/dms/image/v2/D4D35AQGGYT7iyMC5zg/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1733393791964?e=1738303200&v=beta&t=JsQ1G-rAJVrHhXGqt_60--WG18OOu6hchXcsUL-H-7I",
             },
           ].map((teamMember, index) => (
             <div key={index} className="col w-full sm:w-1/2 lg:w-1/3 p-4">
               <div className="team-list bg-white rounded-xl shadow-md hover:shadow-2xl border border-blue-200 p-6 text-center transition-all duration-300 ease-in-out">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                  src={teamMember.image}
                   alt={teamMember.name}
                   className="w-24 h-24 mb-4 rounded-full border-4 border-blue-100 hover:scale-110 transition-transform duration-300"
                 />
@@ -112,8 +124,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        {/* New Section: Testimonials */}
         <div className="text-center mt-16 pb-10">
           <h3 className="text-3xl font-semibold text-blue-800">
             What People Say
