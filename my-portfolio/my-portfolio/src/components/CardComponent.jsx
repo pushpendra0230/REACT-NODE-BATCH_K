@@ -4,9 +4,9 @@ const Navbar = () => (
   <nav className="navbar sticky top-0 z-50 bg-white shadow-md transition-all duration-300 ease-in-out">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
       <div className="logo text-2xl font-extrabold">
-        <a
+        <a 
           href="#"
-          className="text-gray-800 hover:text-blue-500 transition-colors duration-300"
+          className="text-gray-800 hover:text-blue-500 transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-gray-100 hover:shadow-md hover:shadow-blue-500"
         >
           Portfo<span className="text-blue-500">lio.</span>
         </a>
